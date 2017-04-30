@@ -12,12 +12,12 @@ class ListingVC: UIViewController {
 
     @IBOutlet weak var carsTableView: UITableView!
     
-    static let cellIdentifier = "CarCellIdentifer"
+    static let cellIdentifier = "CarCellIdentifier"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         carsTableView.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: ListingVC.cellIdentifier)
-        carsTableView.tableFooterView = UIView(frame: CGRect.zero)
+//        carsTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,6 +40,10 @@ class ListingVC: UIViewController {
 
 extension ListingVC: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 378.0
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,6 +59,3 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
-
-
-

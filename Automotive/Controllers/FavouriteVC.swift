@@ -27,6 +27,10 @@ class FavouriteVC: UIViewController {
 
 extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 153.0
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
