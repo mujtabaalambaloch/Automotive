@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageSlideshow
 
 class ListingVC: UIViewController {
 
@@ -14,18 +15,43 @@ class ListingVC: UIViewController {
     
     static let cellIdentifier = "CarCellIdentifier"
     
+    let activityIndicator = UIActivityIndicatorView()
+    
+    var vehicles = [VehicleViewModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         carsTableView.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: ListingVC.cellIdentifier)
-//        carsTableView.tableFooterView = UIView(frame: CGRect.zero)
+        carsTableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        loadCars()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    func loadCars() {
 
+        Helpers.showActivityIndicator(activityIndicator,self.view)
+        
+        APIManager.shared.getAllCars { (json) in
+            Helpers.hideActivityIndicator(self.activityIndicator)
+            
+            if !(json.null != nil) {
+                
+                self.vehicles = []
+                
+                if let listRes = json["vehicles"].array {
+                    for item in listRes {
+                        let vehicle = Vehicle(json: item)
+                        let viewModel = VehicleViewModel.init(vehicle: vehicle)
+                        self.vehicles.append(viewModel)
+                    }
+                    
+                    self.carsTableView.reloadData()
+                }
+                
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -49,12 +75,24 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return vehicles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: ListingVC.cellIdentifier, for: indexPath) as! CarTableViewCell
+        
+        let viewModel: VehicleViewModel = vehicles[indexPath.row]
+        
+        cell.modelLabel.text = viewModel.makeText
+        cell.mileageLabel.text = viewModel.mileageText
+        cell.mapAddressButton.setTitle(viewModel.addressText, for: UIControlState.normal)
+        cell.yearLabel.text = viewModel.yearText
+        cell.fuelTypeLabel.text = viewModel.fuelText
+        cell.priceLabel.text = viewModel.priceText
+        
+        cell.imageSlideView.setImageInputs(viewModel.photos as! [InputSource])
+        
         return cell
     }
     

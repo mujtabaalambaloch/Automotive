@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		045F4BF71EB6638500F95BE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F4BF61EB6638500F95BE8 /* Extensions.swift */; };
 		048881631EB6224100910804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048881621EB6224100910804 /* AppDelegate.swift */; };
 		048881681EB6224100910804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048881661EB6224100910804 /* Main.storyboard */; };
 		0488816B1EB6224100910804 /* Automotive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 048881691EB6224100910804 /* Automotive.xcdatamodeld */; };
@@ -14,12 +15,17 @@
 		048881701EB6224100910804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488816E1EB6224100910804 /* LaunchScreen.storyboard */; };
 		0488817B1EB6224100910804 /* AutomotiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488817A1EB6224100910804 /* AutomotiveTests.swift */; };
 		048881861EB6224100910804 /* AutomotiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048881851EB6224100910804 /* AutomotiveUITests.swift */; };
+		04B91A4B1EB64563009D5A03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A4A1EB64563009D5A03 /* Constants.swift */; };
+		04B91A4E1EB645A1009D5A03 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A4D1EB645A1009D5A03 /* APIManager.swift */; };
+		04B91A501EB647EC009D5A03 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A4F1EB647EC009D5A03 /* Helper.swift */; };
+		04B91A521EB65302009D5A03 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A511EB65302009D5A03 /* VehicleViewModel.swift */; };
 		04E259AA1EB6244B00401E24 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259A91EB6244B00401E24 /* ListingVC.swift */; };
 		04E259AD1EB6248100401E24 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259AC1EB6248100401E24 /* FavouriteVC.swift */; };
 		04E259B01EB6262C00401E24 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259AE1EB6262C00401E24 /* CarTableViewCell.swift */; };
 		04E259B11EB6262C00401E24 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E259AF1EB6262C00401E24 /* CarTableViewCell.xib */; };
 		04E259B51EB6267D00401E24 /* FavTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259B31EB6267D00401E24 /* FavTableViewCell.swift */; };
 		04E259B61EB6267D00401E24 /* FavTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E259B41EB6267D00401E24 /* FavTableViewCell.xib */; };
+		04E259B81EB63EF400401E24 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259B71EB63EF400401E24 /* Vehicle.swift */; };
 		C1868D12EBCA10608DA8E3FD /* Pods_Automotive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A251F3378C8CD7AC84BC27 /* Pods_Automotive.framework */; };
 		E315EA034864A6F3EE73B3B2 /* Pods_AutomotiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6212D953014141EF865468 /* Pods_AutomotiveUITests.framework */; };
 		F23252605250F27AE5FA8AFB /* Pods_AutomotiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A274A3EFF24145DC3BD6AD1 /* Pods_AutomotiveTests.framework */; };
@@ -43,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		045F4BF61EB6638500F95BE8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Extensions/Extensions.swift; sourceTree = "<group>"; };
 		0488815F1EB6224100910804 /* Automotive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automotive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048881621EB6224100910804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		048881671EB6224100910804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,12 +63,17 @@
 		048881811EB6224100910804 /* AutomotiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomotiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048881851EB6224100910804 /* AutomotiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomotiveUITests.swift; sourceTree = "<group>"; };
 		048881871EB6224100910804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04B91A4A1EB64563009D5A03 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04B91A4D1EB645A1009D5A03 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		04B91A4F1EB647EC009D5A03 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		04B91A511EB65302009D5A03 /* VehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
 		04E259A91EB6244B00401E24 /* ListingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingVC.swift; sourceTree = "<group>"; };
 		04E259AC1EB6248100401E24 /* FavouriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		04E259AE1EB6262C00401E24 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		04E259AF1EB6262C00401E24 /* CarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
 		04E259B31EB6267D00401E24 /* FavTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavTableViewCell.swift; sourceTree = "<group>"; };
 		04E259B41EB6267D00401E24 /* FavTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavTableViewCell.xib; sourceTree = "<group>"; };
+		04E259B71EB63EF400401E24 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		0A274A3EFF24145DC3BD6AD1 /* Pods_AutomotiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutomotiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F841B1C8B68B84649579A38 /* Pods-Automotive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Automotive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Automotive/Pods-Automotive.debug.xcconfig"; sourceTree = "<group>"; };
 		5C614A4B231C30FF9D50311B /* Pods-AutomotiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomotiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutomotiveUITests/Pods-AutomotiveUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045F4BF81EB6638800F95BE8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				045F4BF61EB6638500F95BE8 /* Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		048881561EB6224100910804 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +147,10 @@
 			isa = PBXGroup;
 			children = (
 				048881621EB6224100910804 /* AppDelegate.swift */,
+				045F4BF81EB6638800F95BE8 /* Extensions */,
+				04B91A531EB65306009D5A03 /* ViewModels */,
+				04B91A4C1EB64566009D5A03 /* Manager */,
+				04E259B91EB63EFA00401E24 /* Models */,
 				04E259B21EB6263200401E24 /* Views */,
 				04E259AB1EB6245400401E24 /* Controllers */,
 				048881661EB6224100910804 /* Main.storyboard */,
@@ -156,6 +180,24 @@
 			path = AutomotiveUITests;
 			sourceTree = "<group>";
 		};
+		04B91A4C1EB64566009D5A03 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				04B91A4A1EB64563009D5A03 /* Constants.swift */,
+				04B91A4D1EB645A1009D5A03 /* APIManager.swift */,
+				04B91A4F1EB647EC009D5A03 /* Helper.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		04B91A531EB65306009D5A03 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				04B91A511EB65302009D5A03 /* VehicleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		04E259AB1EB6245400401E24 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +216,14 @@
 				04E259B41EB6267D00401E24 /* FavTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		04E259B91EB63EFA00401E24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04E259B71EB63EF400401E24 /* Vehicle.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		41DC08178F21C1B61C48818E /* Pods */ = {
@@ -488,9 +538,15 @@
 				04E259AA1EB6244B00401E24 /* ListingVC.swift in Sources */,
 				048881631EB6224100910804 /* AppDelegate.swift in Sources */,
 				04E259AD1EB6248100401E24 /* FavouriteVC.swift in Sources */,
+				04B91A521EB65302009D5A03 /* VehicleViewModel.swift in Sources */,
+				04B91A4E1EB645A1009D5A03 /* APIManager.swift in Sources */,
 				0488816B1EB6224100910804 /* Automotive.xcdatamodeld in Sources */,
+				04E259B81EB63EF400401E24 /* Vehicle.swift in Sources */,
+				045F4BF71EB6638500F95BE8 /* Extensions.swift in Sources */,
 				04E259B01EB6262C00401E24 /* CarTableViewCell.swift in Sources */,
+				04B91A501EB647EC009D5A03 /* Helper.swift in Sources */,
 				04E259B51EB6267D00401E24 /* FavTableViewCell.swift in Sources */,
+				04B91A4B1EB64563009D5A03 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

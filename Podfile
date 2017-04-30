@@ -9,6 +9,7 @@ target 'Automotive' do
   pod 'Alamofire', '~> 4.4'
   pod 'ImageSlideshow', '~> 1.2'
   pod "ImageSlideshow/Alamofire"
+  pod 'SwiftyJSON'
 
   target 'AutomotiveTests' do
     inherit! :search_paths
