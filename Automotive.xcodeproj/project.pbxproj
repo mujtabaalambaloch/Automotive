@@ -15,6 +15,9 @@
 		048881701EB6224100910804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488816E1EB6224100910804 /* LaunchScreen.storyboard */; };
 		0488817B1EB6224100910804 /* AutomotiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488817A1EB6224100910804 /* AutomotiveTests.swift */; };
 		048881861EB6224100910804 /* AutomotiveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048881851EB6224100910804 /* AutomotiveUITests.swift */; };
+		C1868D12EBCA10608DA8E3FD /* Pods_Automotive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A251F3378C8CD7AC84BC27 /* Pods_Automotive.framework */; };
+		E315EA034864A6F3EE73B3B2 /* Pods_AutomotiveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6212D953014141EF865468 /* Pods_AutomotiveUITests.framework */; };
+		F23252605250F27AE5FA8AFB /* Pods_AutomotiveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A274A3EFF24145DC3BD6AD1 /* Pods_AutomotiveTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		048881811EB6224100910804 /* AutomotiveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutomotiveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048881851EB6224100910804 /* AutomotiveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomotiveUITests.swift; sourceTree = "<group>"; };
 		048881871EB6224100910804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A274A3EFF24145DC3BD6AD1 /* Pods_AutomotiveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutomotiveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F841B1C8B68B84649579A38 /* Pods-Automotive.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Automotive.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Automotive/Pods-Automotive.debug.xcconfig"; sourceTree = "<group>"; };
+		5C614A4B231C30FF9D50311B /* Pods-AutomotiveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomotiveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutomotiveUITests/Pods-AutomotiveUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6F8C72BE586B2C4D68ED71B5 /* Pods-Automotive.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Automotive.release.xcconfig"; path = "Pods/Target Support Files/Pods-Automotive/Pods-Automotive.release.xcconfig"; sourceTree = "<group>"; };
+		83A251F3378C8CD7AC84BC27 /* Pods_Automotive.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Automotive.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9DF201DF3C372173163A242 /* Pods-AutomotiveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomotiveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutomotiveTests/Pods-AutomotiveTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7C4A52AD0076CEC07E462BF /* Pods-AutomotiveTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomotiveTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutomotiveTests/Pods-AutomotiveTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE6212D953014141EF865468 /* Pods_AutomotiveUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AutomotiveUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7028540A6102DE15F47E21B /* Pods-AutomotiveUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutomotiveUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutomotiveUITests/Pods-AutomotiveUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1868D12EBCA10608DA8E3FD /* Pods_Automotive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23252605250F27AE5FA8AFB /* Pods_AutomotiveTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E315EA034864A6F3EE73B3B2 /* Pods_AutomotiveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				048881791EB6224100910804 /* AutomotiveTests */,
 				048881841EB6224100910804 /* AutomotiveUITests */,
 				048881601EB6224100910804 /* Products */,
+				41DC08178F21C1B61C48818E /* Pods */,
+				931CDE05D156DB0A5AB14BA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,29 @@
 			path = AutomotiveUITests;
 			sourceTree = "<group>";
 		};
+		41DC08178F21C1B61C48818E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F841B1C8B68B84649579A38 /* Pods-Automotive.debug.xcconfig */,
+				6F8C72BE586B2C4D68ED71B5 /* Pods-Automotive.release.xcconfig */,
+				A9DF201DF3C372173163A242 /* Pods-AutomotiveTests.debug.xcconfig */,
+				B7C4A52AD0076CEC07E462BF /* Pods-AutomotiveTests.release.xcconfig */,
+				F7028540A6102DE15F47E21B /* Pods-AutomotiveUITests.debug.xcconfig */,
+				5C614A4B231C30FF9D50311B /* Pods-AutomotiveUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		931CDE05D156DB0A5AB14BA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83A251F3378C8CD7AC84BC27 /* Pods_Automotive.framework */,
+				0A274A3EFF24145DC3BD6AD1 /* Pods_AutomotiveTests.framework */,
+				DE6212D953014141EF865468 /* Pods_AutomotiveUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0488818A1EB6224100910804 /* Build configuration list for PBXNativeTarget "Automotive" */;
 			buildPhases = (
+				EEA1666A4A2F8AB1A1CEEDAA /* [CP] Check Pods Manifest.lock */,
 				0488815B1EB6224100910804 /* Sources */,
 				0488815C1EB6224100910804 /* Frameworks */,
 				0488815D1EB6224100910804 /* Resources */,
+				2DA29325EDBFA39A80212947 /* [CP] Embed Pods Frameworks */,
+				FD04F7086FD95F48431D84E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0488818D1EB6224100910804 /* Build configuration list for PBXNativeTarget "AutomotiveTests" */;
 			buildPhases = (
+				2B04DC9A65BFA643C6198EC1 /* [CP] Check Pods Manifest.lock */,
 				048881721EB6224100910804 /* Sources */,
 				048881731EB6224100910804 /* Frameworks */,
 				048881741EB6224100910804 /* Resources */,
+				0E6091E21487F02D0DCC72E9 /* [CP] Embed Pods Frameworks */,
+				0CB7944987B7C8A29538FC74 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 048881901EB6224100910804 /* Build configuration list for PBXNativeTarget "AutomotiveUITests" */;
 			buildPhases = (
+				475E9DB1CAB424622E308651 /* [CP] Check Pods Manifest.lock */,
 				0488817D1EB6224100910804 /* Sources */,
 				0488817E1EB6224100910804 /* Frameworks */,
 				0488817F1EB6224100910804 /* Resources */,
+				9F5CE025B7DD91F0CF1CD4F7 /* [CP] Embed Pods Frameworks */,
+				DF765DC552BF50B7D7B6EC9B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -259,6 +308,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CB7944987B7C8A29538FC74 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutomotiveTests/Pods-AutomotiveTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E6091E21487F02D0DCC72E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutomotiveTests/Pods-AutomotiveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B04DC9A65BFA643C6198EC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DA29325EDBFA39A80212947 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Automotive/Pods-Automotive-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		475E9DB1CAB424622E308651 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F5CE025B7DD91F0CF1CD4F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutomotiveUITests/Pods-AutomotiveUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF765DC552BF50B7D7B6EC9B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutomotiveUITests/Pods-AutomotiveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEA1666A4A2F8AB1A1CEEDAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD04F7086FD95F48431D84E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Automotive/Pods-Automotive-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0488815B1EB6224100910804 /* Sources */ = {
@@ -415,10 +602,12 @@
 		};
 		0488818B1EB6224100910804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F841B1C8B68B84649579A38 /* Pods-Automotive.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3UJEPK4LT;
 				INFOPLIST_FILE = Automotive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mujtabaalam.Automotive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -428,10 +617,12 @@
 		};
 		0488818C1EB6224100910804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F8C72BE586B2C4D68ED71B5 /* Pods-Automotive.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = V3UJEPK4LT;
 				INFOPLIST_FILE = Automotive/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mujtabaalam.Automotive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,6 +632,7 @@
 		};
 		0488818E1EB6224100910804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9DF201DF3C372173163A242 /* Pods-AutomotiveTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -456,6 +648,7 @@
 		};
 		0488818F1EB6224100910804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7C4A52AD0076CEC07E462BF /* Pods-AutomotiveTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -471,6 +664,7 @@
 		};
 		048881911EB6224100910804 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7028540A6102DE15F47E21B /* Pods-AutomotiveUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = V3UJEPK4LT;
@@ -485,6 +679,7 @@
 		};
 		048881921EB6224100910804 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C614A4B231C30FF9D50311B /* Pods-AutomotiveUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = V3UJEPK4LT;
