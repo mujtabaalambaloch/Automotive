@@ -19,6 +19,8 @@ class ListingVC: UIViewController {
     
     var vehicles = [VehicleViewModel]()
     
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         carsTableView.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: ListingVC.cellIdentifier)
@@ -26,6 +28,8 @@ class ListingVC: UIViewController {
         
         loadCars()
     }
+    
+    // MARK: - API Request
     
     func loadCars() {
 
@@ -64,6 +68,8 @@ class ListingVC: UIViewController {
 
 }
 
+// MARK: - Table View Methods
+
 extension ListingVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -95,5 +101,4 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
 }
