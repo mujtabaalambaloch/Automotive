@@ -47,6 +47,7 @@ class FavouriteVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 }
 
 extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
@@ -90,6 +91,7 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         let deleteButton = sender as! UIButton
         let viewModel: FavViewModel = vehicles[deleteButton.tag]
         viewModel.deleteFavourite()
+        vehicles.remove(at: deleteButton.tag)
         self.favTableView.reloadData()
     }
     

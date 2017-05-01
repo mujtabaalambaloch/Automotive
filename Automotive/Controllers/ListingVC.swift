@@ -145,6 +145,12 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
         let favSwitch = sender as! UISwitch
         let viewModel: VehicleViewModel = vehicles[favSwitch.tag]
         viewModel.addRemoveFav()
+        
+        if DatabaseHandler.totalFav() > 0 {
+            self.tabBarController?.tabBar.items?.last?.badgeValue = String(DatabaseHandler.totalFav())
+        } else {
+            self.tabBarController?.tabBar.items?.last?.badgeValue = nil
+        }
     }
     
     // MARK: - Display Map Address

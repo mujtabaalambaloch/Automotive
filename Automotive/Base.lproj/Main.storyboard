@@ -136,7 +136,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Map Address" id="gQS-iS-xXe">
                         <barButtonItem key="rightBarButtonItem" title="Done" id="pPs-me-ccq">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="doneAction:" destination="IfW-zI-854" id="T1a-Cp-InU"/>
                             </connections>
@@ -177,9 +177,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FhZ-OJ-aUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.17388752102851868" green="0.51268601417541504" blue="0.82594293355941772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" red="0.99990183119999998" green="1" blue="0.99987989659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -200,9 +201,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8b9-en-zEv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.17388752099999999" green="0.51268601420000004" blue="0.82594293360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -222,7 +224,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A6a-ks-VaU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.17388752099999999" green="0.51268601420000004" blue="0.82594293360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -239,6 +245,6 @@
         <image name="listImage" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UV0-A1-NBc"/>
+        <segue reference="eXY-tr-ZQP"/>
     </inferredMetricsTieBreakers>
 </document>
