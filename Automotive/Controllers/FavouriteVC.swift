@@ -82,7 +82,9 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         cell.deleteButton.addTarget(self, action: #selector(deleteFavourites(sender:)), for: .touchUpInside)
         cell.deleteButton.tag = indexPath.row
         
-        cell.carImageView.af_setImage(withURL: viewModel.photoURL!)
+        let placeholderImage = UIImage(named: "holder")!
+        cell.carImageView.af_setImage(withURL: viewModel.photoURL!, placeholderImage: placeholderImage)
+        cell.carImageView.contentMode = .scaleToFill
         
         cell.mapAddressButton.addTarget(self, action: #selector(displayMapAddress(sender:)), for: .touchUpInside)
         cell.mapAddressButton.tag = indexPath.row
