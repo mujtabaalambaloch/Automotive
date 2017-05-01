@@ -20,6 +20,9 @@ class CarTableViewCell: UITableViewCell {
     @IBOutlet weak var mapAddressButton: UIButton!
     @IBOutlet weak var favSwitch: UISwitch!
     
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var accidentImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         mainView.addShadow()

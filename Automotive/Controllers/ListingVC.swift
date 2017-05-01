@@ -112,14 +112,12 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
         
         cell.modelLabel.text = viewModel.makeText
         cell.mileageLabel.text = viewModel.mileageText
-        cell.mapAddressButton.setTitle(viewModel.addressText, for: .normal)
+        cell.addressLabel.text = viewModel.addressText
         cell.yearLabel.text = viewModel.yearText
         cell.fuelTypeLabel.text = viewModel.fuelText
         cell.priceLabel.text = viewModel.priceText
         
         cell.imageSlideView.setImageInputs(viewModel.photos as! [InputSource])
-        
-        
         
         cell.favSwitch.isOn = viewModel.isFav
         cell.favSwitch.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
@@ -127,8 +125,12 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
         
         if !viewModel.accidentFree {
             cell.favSwitch.isEnabled = false
+            cell.accidentImageView.isHidden = false
+            cell.mainView.backgroundColor = UIColor(red:0.96, green:0.96, blue:0.96, alpha:1.0)
         } else {
             cell.favSwitch.isEnabled = true
+            cell.accidentImageView.isHidden = true
+            cell.mainView.backgroundColor = UIColor.white
         }
         
         return cell

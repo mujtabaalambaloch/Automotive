@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--FavouriteVC-->
+        <!--Favourites-->
         <scene sceneID="R0z-vV-lti">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="334-vH-ruc" customClass="FavouriteVC" customModule="Automotive" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <constraint firstItem="c1q-Xb-b0p" firstAttribute="leading" secondItem="M3c-ds-XY3" secondAttribute="leading" id="urQ-Zo-NLc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qb8-iU-fAa"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="qb8-iU-fAa"/>
                     <connections>
                         <outlet property="favTableView" destination="c1q-Xb-b0p" id="e5B-cO-seJ"/>
                     </connections>
@@ -57,7 +57,7 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="158.77061469265368"/>
         </scene>
-        <!--ListingVC-->
+        <!--Cars Listing-->
         <scene sceneID="cbQ-dC-kvh">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="knJ-gn-smy" customClass="ListingVC" customModule="Automotive" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                             <constraint firstItem="QJB-f6-TjK" firstAttribute="top" secondItem="kun-IO-ffV" secondAttribute="bottom" id="s3j-qU-bUx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="9qT-qY-rYi"/>
+                    <navigationItem key="navigationItem" title="Cars Listing" id="9qT-qY-rYi"/>
                     <connections>
                         <outlet property="carsTableView" destination="QJB-f6-TjK" id="CPw-7j-s4x"/>
                     </connections>
@@ -132,9 +132,13 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uS6-fb-1ug" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Listing" image="listImage" id="PW2-Ll-PEo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FhZ-OJ-aUk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FhZ-OJ-aUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -151,9 +155,13 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ez4-Lo-IYF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="1" title="Favourites" image="favImage" id="7zg-RD-gOm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8b9-en-zEv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8b9-en-zEv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
