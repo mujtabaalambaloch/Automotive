@@ -11,6 +11,7 @@
 		043617601EB73B410032FDE6 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436175E1EB73B410032FDE6 /* Favourites+CoreDataProperties.swift */; };
 		043617621EB73BE00032FDE6 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043617611EB73BE00032FDE6 /* DatabaseHandler.swift */; };
 		043617641EB73EF50032FDE6 /* FavViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043617631EB73EF50032FDE6 /* FavViewModel.swift */; };
+		043BA9161EB765CB00B684F1 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043BA9151EB765CB00B684F1 /* Formatter.swift */; };
 		045F4BF71EB6638500F95BE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F4BF61EB6638500F95BE8 /* Extensions.swift */; };
 		048881631EB6224100910804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048881621EB6224100910804 /* AppDelegate.swift */; };
 		048881681EB6224100910804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048881661EB6224100910804 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		0436175E1EB73B410032FDE6 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		043617611EB73BE00032FDE6 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		043617631EB73EF50032FDE6 /* FavViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavViewModel.swift; sourceTree = "<group>"; };
+		043BA9151EB765CB00B684F1 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		045F4BF61EB6638500F95BE8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Extensions/Extensions.swift; sourceTree = "<group>"; };
 		0488815F1EB6224100910804 /* Automotive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automotive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048881621EB6224100910804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				04B91A4D1EB645A1009D5A03 /* APIManager.swift */,
 				04B91A4F1EB647EC009D5A03 /* Helper.swift */,
 				043617611EB73BE00032FDE6 /* DatabaseHandler.swift */,
+				043BA9151EB765CB00B684F1 /* Formatter.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				04B91A4E1EB645A1009D5A03 /* APIManager.swift in Sources */,
 				0488816B1EB6224100910804 /* Automotive.xcdatamodeld in Sources */,
 				04E259B81EB63EF400401E24 /* Vehicle.swift in Sources */,
+				043BA9161EB765CB00B684F1 /* Formatter.swift in Sources */,
 				045F4BF71EB6638500F95BE8 /* Extensions.swift in Sources */,
 				04E259B01EB6262C00401E24 /* CarTableViewCell.swift in Sources */,
 				04B91A501EB647EC009D5A03 /* Helper.swift in Sources */,

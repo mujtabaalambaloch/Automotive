@@ -19,7 +19,7 @@ class VehicleViewModel {
     }
     
     var mileageText: String {
-        return "\(vehicle.mileage!.formattedWithSeparator) km"
+        return Formatter.milageValue(milage: vehicle.mileage!)
     }
     
     var addressText: String {
@@ -27,15 +27,15 @@ class VehicleViewModel {
     }
     
     var yearText: String {
-        return "Year: \(vehicle.firstRegistration!)"
+        return Formatter.yearValue(year: vehicle.firstRegistration!)
     }
     
     var fuelText: String {
-        return "Fuel Type: \(vehicle.fuelType!)"
+        return Formatter.fuelValue(fuel: vehicle.fuelType!)
     }
     
     var priceText: String {
-        return "€\(vehicle.price!.formattedWithSeparator)"
+        return Formatter.priceValue(price: vehicle.price!)
     }
     
     var photos: Array<Any>? {

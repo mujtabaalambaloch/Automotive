@@ -17,7 +17,7 @@ class FavViewModel {
     }
     
     var mileageText: String {
-        return "\(vehicle.mileage.formattedWithSeparator) km"
+        return Formatter.milageValue(milage: Int(vehicle.mileage))
     }
     
     var addressText: String {
@@ -25,15 +25,15 @@ class FavViewModel {
     }
     
     var yearText: String {
-        return "Year: \(vehicle.firstRegistration!)"
+        return Formatter.yearValue(year: vehicle.firstRegistration!)
     }
     
     var fuelText: String {
-        return "Fuel Type: \(vehicle.fuelType!)"
+        return Formatter.fuelValue(fuel: vehicle.fuelType!)
     }
     
     var priceText: String {
-        return "€\(vehicle.price.formattedWithSeparator)"
+        return Formatter.priceValue(price: Int(vehicle.price))
     }
     
 //    var photos: Array<Any>? {
@@ -44,7 +44,13 @@ class FavViewModel {
 //        return photosArray
 //    }
     
+    func deleteFavourite() {
+        DatabaseHandler.deleteContext(favID: Int(vehicle.id))
+    }
+    
     init(vehicle: Favourites) {
         self.vehicle = vehicle
     }
+    
+    
 }

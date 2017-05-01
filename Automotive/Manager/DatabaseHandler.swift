@@ -88,6 +88,7 @@ class DatabaseHandler: NSObject {
     class func deleteContext(favID: Int) {
         guard let result = DatabaseHandler.favValue(favID: favID) else{ return }
         DatabaseHandler.getContext().delete(result)
+        DatabaseHandler.saveContext()
     }
     
     class func favExist(favID: Int) -> Bool {

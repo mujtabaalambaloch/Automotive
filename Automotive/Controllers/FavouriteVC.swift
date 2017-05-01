@@ -20,22 +20,26 @@ class FavouriteVC: UIViewController {
         super.viewDidLoad()
         favTableView.register(UINib(nibName: "FavTableViewCell", bundle: nil), forCellReuseIdentifier: FavouriteVC.cellIdentifier)
         favTableView.tableFooterView = UIView(frame: CGRect.zero)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         let fetchRequest:NSFetchRequest<Favourites> = Favourites.fetchRequest()
+        
+        self.vehicles = []
         
         do {
             let searchResult = try DatabaseHandler.getContext().fetch(fetchRequest)
-            print("number of results: \(searchResult.count)")
-            
             for result in searchResult as [Favourites] {
                 let viewModel = FavViewModel.init(vehicle: result)
                 self.vehicles.append(viewModel)
             }
             
+            self.favTableView.reloadData()
+            
         } catch {
+            self.favTableView.reloadData()
             print("Error")
         }
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -70,6 +74,17 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         cell.mapAddressButton.setTitle(viewModel.addressText, for: UIControlState.normal)
         cell.yearLabel.text = viewModel.yearText
         
+        cell.deleteButton.addTarget(self, action: #selector(deleteFavourites(sender:)), for: .touchUpInside)
+        cell.deleteButton.tag = indexPath.row
+        
         return cell
     }
+    
+    func deleteFavourites(sender:AnyObject) {
+        let deleteButton = sender as! UIButton
+        let viewModel: FavViewModel = vehicles[deleteButton.tag]
+        viewModel.deleteFavourite()
+        self.favTableView.reloadData()
+    }
 }
+

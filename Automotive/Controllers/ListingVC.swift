@@ -34,6 +34,11 @@ class ListingVC: UIViewController {
         loadCars()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        carsTableView.reloadData()
+    }
+    
     // MARK: - API Request
     
     func loadCars() {
@@ -102,8 +107,6 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: ListingVC.cellIdentifier, for: indexPath) as! CarTableViewCell
-        
-        
         
         let viewModel: VehicleViewModel = vehicles[indexPath.row]
         
