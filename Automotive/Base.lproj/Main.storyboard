@@ -51,6 +51,7 @@
                     <navigationItem key="navigationItem" title="Favourites" id="qb8-iU-fAa"/>
                     <connections>
                         <outlet property="favTableView" destination="c1q-Xb-b0p" id="e5B-cO-seJ"/>
+                        <segue destination="3xd-YT-KMG" kind="presentation" identifier="MapAddressSegue" id="UV0-A1-NBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czV-Es-uRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,11 +103,52 @@
                     <navigationItem key="navigationItem" title="Cars Listing" id="9qT-qY-rYi"/>
                     <connections>
                         <outlet property="carsTableView" destination="QJB-f6-TjK" id="CPw-7j-s4x"/>
+                        <segue destination="3xd-YT-KMG" kind="presentation" identifier="AddressSegue" id="eXY-tr-ZQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VoU-9x-ZaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2015.2" y="-495.20239880059972"/>
+        </scene>
+        <!--Map Address-->
+        <scene sceneID="D3r-OM-Sdp">
+            <objects>
+                <viewController id="IfW-zI-854" customClass="MapAddressVC" customModule="Automotive" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XDn-Mn-dZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="JaD-A9-GUQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZDC-fl-oo2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="yKf-sf-dyc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yKf-sf-dyc" firstAttribute="top" secondItem="XDn-Mn-dZA" secondAttribute="bottom" id="SUN-ug-qSt"/>
+                            <constraint firstItem="yKf-sf-dyc" firstAttribute="leading" secondItem="ZDC-fl-oo2" secondAttribute="leading" id="h6C-nb-uo5"/>
+                            <constraint firstItem="JaD-A9-GUQ" firstAttribute="top" secondItem="yKf-sf-dyc" secondAttribute="bottom" id="k2N-MY-xVd"/>
+                            <constraint firstAttribute="trailing" secondItem="yKf-sf-dyc" secondAttribute="trailing" id="xQ6-2y-89Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map Address" id="gQS-iS-xXe">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="pPs-me-ccq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="doneAction:" destination="IfW-zI-854" id="T1a-Cp-InU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressMapView" destination="yKf-sf-dyc" id="Ua5-Fe-0x1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xc4-vf-ifQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4015.1999999999998" y="-497.00149925037488"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="1Kn-za-sc8">
@@ -172,9 +214,31 @@
             </objects>
             <point key="canvasLocation" x="1076" y="159.67016491754123"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SLR-ny-KdA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3xd-YT-KMG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="A6a-ks-VaU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.57046633960000004" green="0.85668402909999997" blue="0.35624390839999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IfW-zI-854" kind="relationship" relationship="rootViewController" id="ddD-3L-iUI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hcf-vn-lDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076" y="-497.00149925037488"/>
+        </scene>
     </scenes>
     <resources>
         <image name="favImage" width="25" height="25"/>
         <image name="listImage" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UV0-A1-NBc"/>
+    </inferredMetricsTieBreakers>
 </document>

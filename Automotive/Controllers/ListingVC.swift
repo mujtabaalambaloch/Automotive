@@ -133,12 +133,38 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
             cell.mainView.backgroundColor = UIColor.white
         }
         
+        cell.mapAddressButton.addTarget(self, action: #selector(displayMapAddress(sender:)), for: .touchUpInside)
+        cell.mapAddressButton.tag = indexPath.row
+        
         return cell
     }
+    
+    // MARK: - Favourite Functionality
     
     func switchValueDidChange(sender:AnyObject) {
         let favSwitch = sender as! UISwitch
         let viewModel: VehicleViewModel = vehicles[favSwitch.tag]
         viewModel.addRemoveFav()
     }
+    
+    // MARK: - Display Map Address
+    
+    func displayMapAddress(sender:AnyObject) {
+        let mapButton = sender as! UIButton
+        performSegue(withIdentifier: "AddressSegue", sender: mapButton.tag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let row = (sender as! Int)
+        let viewModel: VehicleViewModel = vehicles[row]
+        
+        if segue.identifier == "AddressSegue" {
+            
+            let nav = segue.destination as! UINavigationController
+            let details = nav.topViewController as! MapAddressVC
+            details.address = viewModel.addressText
+            
+        }
+    }
+    
 }
