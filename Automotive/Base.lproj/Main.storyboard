@@ -29,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lgf-1G-hxY" id="elp-pJ-m56">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -71,7 +71,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QJB-f6-TjK">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.94108384850000004" green="0.94124144320000003" blue="0.94106310609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.94108384850000004" green="0.94124144320000003" blue="0.94106310609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CarCellIdentifier" rowHeight="44" id="PCP-e0-kqM">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -79,7 +80,9 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PCP-e0-kqM" id="e4p-sz-7L2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="0.94108384850000004" green="0.94124144320000003" blue="0.94106310609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94108384847640991" green="0.94124144315719604" blue="0.94106310606002808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -88,7 +91,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94108384850000004" green="0.94124144320000003" blue="0.94106310609999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QJB-f6-TjK" firstAttribute="leading" secondItem="rEt-DB-cni" secondAttribute="leading" id="A9I-w9-3Wd"/>
                             <constraint firstItem="IgM-dU-NaN" firstAttribute="top" secondItem="QJB-f6-TjK" secondAttribute="bottom" id="LDK-aP-mCy"/>
@@ -129,7 +132,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uS6-fb-1ug" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Listing" image="listImage" id="PW2-Ll-PEo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FhZ-OJ-aUk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FhZ-OJ-aUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -148,7 +151,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ez4-Lo-IYF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favourites" image="favImage" id="7zg-RD-gOm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8b9-en-zEv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8b9-en-zEv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

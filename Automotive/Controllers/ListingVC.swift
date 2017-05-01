@@ -19,12 +19,17 @@ class ListingVC: UIViewController {
     
     var vehicles = [VehicleViewModel]()
     
+    private let refreshControl = UIRefreshControl()
+    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         carsTableView.register(UINib(nibName: "CarTableViewCell", bundle: nil), forCellReuseIdentifier: ListingVC.cellIdentifier)
         carsTableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        carsTableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(loadCars), for: .valueChanged)
         
         loadCars()
     }
@@ -33,10 +38,20 @@ class ListingVC: UIViewController {
     
     func loadCars() {
 
+        if refreshControl.isEnabled {
+            carsTableView.isUserInteractionEnabled = false
+        }
+        
         Helpers.showActivityIndicator(activityIndicator,self.view)
         
         APIManager.shared.getAllCars { (json) in
             Helpers.hideActivityIndicator(self.activityIndicator)
+            
+            self.carsTableView.isUserInteractionEnabled = true
+            
+            if self.refreshControl.isEnabled {
+                self.refreshControl.endRefreshing()
+            }
             
             if !(json.null != nil) {
                 
@@ -51,10 +66,10 @@ class ListingVC: UIViewController {
                     
                     self.carsTableView.reloadData()
                 }
-                
             }
         }
     }
+    
     
     /*
     // MARK: - Navigation
