@@ -67,6 +67,7 @@ class VehicleViewModel {
             favourite.price = Int64(vehicle.price!)
             favourite.powerKW = Int64(vehicle.powerKW!)
             favourite.make = vehicle.make
+            favourite.images = vehicle.images?[0].stringValue
             
             DatabaseHandler.saveContext()
         } else {

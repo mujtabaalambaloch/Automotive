@@ -25,6 +25,6 @@ extension Favourites {
     @NSManaged public var mileage: Int64
     @NSManaged public var make: String?
     @NSManaged public var fuelType: String?
-    @NSManaged public var images: NSData?
-
+    @NSManaged public var images: String?
+    
 }

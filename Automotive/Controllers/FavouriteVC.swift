@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import AlamofireImage
 
 class FavouriteVC: UIViewController {
     @IBOutlet weak var favTableView: UITableView!
@@ -71,11 +72,16 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         cell.milageLabel.text = viewModel.mileageText
         cell.fuelTypeLabel.text = viewModel.fuelText
         cell.priceLabel.text = viewModel.priceText
-        cell.mapAddressButton.setTitle(viewModel.addressText, for: UIControlState.normal)
+        cell.addressLabel.text = viewModel.addressText
         cell.yearLabel.text = viewModel.yearText
         
         cell.deleteButton.addTarget(self, action: #selector(deleteFavourites(sender:)), for: .touchUpInside)
         cell.deleteButton.tag = indexPath.row
+        
+        cell.carImageView.af_setImage(withURL: viewModel.photoURL!)
+        
+        cell.mapAddressButton.addTarget(self, action: #selector(displayMapAddress(sender:)), for: .touchUpInside)
+        cell.mapAddressButton.tag = indexPath.row
         
         return cell
     }
@@ -86,5 +92,25 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
         viewModel.deleteFavourite()
         self.favTableView.reloadData()
     }
+    
+    
+    func displayMapAddress(sender:AnyObject) {
+        let mapButton = sender as! UIButton
+        performSegue(withIdentifier: "MapAddressSegue", sender: mapButton.tag)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let row = (sender as! Int)
+        let viewModel: FavViewModel = vehicles[row]
+        
+        if segue.identifier == "MapAddressSegue" {
+            
+            let nav = segue.destination as! UINavigationController
+            let details = nav.topViewController as! MapAddressVC
+            details.address = viewModel.addressText
+            
+        }
+    }
+    
 }
 

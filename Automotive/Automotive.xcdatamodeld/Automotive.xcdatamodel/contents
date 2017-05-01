@@ -6,13 +6,13 @@
         <attribute name="firstRegistration" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fuelType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="images" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="images" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="make" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mileage" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="powerKW" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favourites" positionX="-63" positionY="-18" width="128" height="193"/>
+        <element name="Favourites" positionX="-63" positionY="-18" width="128" height="195"/>
     </elements>
 </model>

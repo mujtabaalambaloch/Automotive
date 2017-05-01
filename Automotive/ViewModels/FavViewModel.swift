@@ -36,13 +36,9 @@ class FavViewModel {
         return Formatter.priceValue(price: Int(vehicle.price))
     }
     
-//    var photos: Array<Any>? {
-//        var photosArray = [AlamofireSource]();
-//        for name in vehicle.images! {
-//            photosArray.append(AlamofireSource.init(urlString: name.string!)!)
-//        }
-//        return photosArray
-//    }
+    var photoURL: URL? {
+        return URL.init(string: vehicle.images!)
+    }
     
     func deleteFavourite() {
         DatabaseHandler.deleteContext(favID: Int(vehicle.id))

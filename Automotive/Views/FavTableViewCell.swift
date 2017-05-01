@@ -16,8 +16,9 @@ class FavTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var milageLabel: UILabel!
     @IBOutlet weak var fuelTypeLabel: UILabel!
-    @IBOutlet weak var mapAddressButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var mapAddressButton: UIButton!
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
