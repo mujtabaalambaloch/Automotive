@@ -120,9 +120,16 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
         cell.imageSlideView.setImageInputs(viewModel.photos as! [InputSource])
         
         
+        
         cell.favSwitch.isOn = viewModel.isFav
         cell.favSwitch.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
         cell.favSwitch.tag = indexPath.row
+        
+        if !viewModel.accidentFree {
+            cell.favSwitch.isEnabled = false
+        } else {
+            cell.favSwitch.isEnabled = true
+        }
         
         return cell
     }

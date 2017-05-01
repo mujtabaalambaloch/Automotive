@@ -96,4 +96,13 @@ class DatabaseHandler: NSObject {
         return true
     }
     
+    class func totalFav() -> Int {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favourites")
+        do {
+            let searchResult = try DatabaseHandler.getContext().fetch(fetchRequest) as? [Favourites]
+            return (searchResult?.count)!
+        } catch {
+            return 0
+        }
+    }
 }

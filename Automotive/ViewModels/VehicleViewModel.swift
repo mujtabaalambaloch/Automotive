@@ -46,6 +46,10 @@ class VehicleViewModel {
         return photosArray
     }
     
+    var accidentFree: Bool {
+        return vehicle.accidentFree!
+    }
+    
     var isFav: Bool {
         return DatabaseHandler.favExist(favID: vehicle.id!)
     }

@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="2015.2" y="-495.20239880059972"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab BarVC-->
         <scene sceneID="1Kn-za-sc8">
             <objects>
-                <tabBarController id="tnq-AZ-bcV" sceneMemberID="viewController">
+                <tabBarController id="tnq-AZ-bcV" customClass="TabBarVC" customModule="Automotive" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3IL-yB-duT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -132,7 +132,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uS6-fb-1ug" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Listing" image="listImage" id="PW2-Ll-PEo"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="FhZ-OJ-aUk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FhZ-OJ-aUk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -149,9 +149,9 @@
         <scene sceneID="Q1b-8x-xXw">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ez4-Lo-IYF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favourites" image="favImage" id="7zg-RD-gOm"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Favourites" image="favImage" id="7zg-RD-gOm"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8b9-en-zEv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8b9-en-zEv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

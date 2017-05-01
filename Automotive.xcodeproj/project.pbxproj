@@ -24,6 +24,7 @@
 		04B91A4E1EB645A1009D5A03 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A4D1EB645A1009D5A03 /* APIManager.swift */; };
 		04B91A501EB647EC009D5A03 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A4F1EB647EC009D5A03 /* Helper.swift */; };
 		04B91A521EB65302009D5A03 /* VehicleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B91A511EB65302009D5A03 /* VehicleViewModel.swift */; };
+		04DFA0801EB76E440012A774 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFA07F1EB76E440012A774 /* TabBarVC.swift */; };
 		04E259AA1EB6244B00401E24 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259A91EB6244B00401E24 /* ListingVC.swift */; };
 		04E259AD1EB6248100401E24 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259AC1EB6248100401E24 /* FavouriteVC.swift */; };
 		04E259B01EB6262C00401E24 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E259AE1EB6262C00401E24 /* CarTableViewCell.swift */; };
@@ -77,6 +78,7 @@
 		04B91A4D1EB645A1009D5A03 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		04B91A4F1EB647EC009D5A03 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		04B91A511EB65302009D5A03 /* VehicleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleViewModel.swift; sourceTree = "<group>"; };
+		04DFA07F1EB76E440012A774 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		04E259A91EB6244B00401E24 /* ListingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListingVC.swift; sourceTree = "<group>"; };
 		04E259AC1EB6248100401E24 /* FavouriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
 		04E259AE1EB6262C00401E24 /* CarTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				04E259A91EB6244B00401E24 /* ListingVC.swift */,
 				04E259AC1EB6248100401E24 /* FavouriteVC.swift */,
+				04DFA07F1EB76E440012A774 /* TabBarVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -554,6 +557,7 @@
 				04E259AA1EB6244B00401E24 /* ListingVC.swift in Sources */,
 				048881631EB6224100910804 /* AppDelegate.swift in Sources */,
 				04E259AD1EB6248100401E24 /* FavouriteVC.swift in Sources */,
+				04DFA0801EB76E440012A774 /* TabBarVC.swift in Sources */,
 				043617601EB73B410032FDE6 /* Favourites+CoreDataProperties.swift in Sources */,
 				0436175F1EB73B410032FDE6 /* Favourites+CoreDataClass.swift in Sources */,
 				043617641EB73EF50032FDE6 /* FavViewModel.swift in Sources */,
