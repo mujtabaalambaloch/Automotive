@@ -35,17 +35,15 @@ class FavouriteVC: UIViewController {
                 self.vehicles.append(viewModel)
             }
             
-            self.favTableView.reloadData()
+            if searchResult.count > 0 {
+                self.favTableView.reloadData()
+            } else {
+                emptyTable()
+            }
             
         } catch {
-            self.favTableView.reloadData()
             print("Error")
         }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
@@ -112,6 +110,19 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
             details.address = viewModel.addressText
             
         }
+    }
+    
+    // MARK: Empty Table
+    
+    func emptyTable() {
+        let messageLabel:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        messageLabel.textColor = UIColor.lightGray
+        messageLabel.numberOfLines = 0
+        messageLabel.textAlignment = .center
+        messageLabel.font = UIFont.systemFont(ofSize: 18)
+        messageLabel.sizeToFit()
+        messageLabel.text = "You don't have any favorites yet. All your favorites will show up here."
+        self.favTableView.backgroundView = messageLabel
     }
     
 }
