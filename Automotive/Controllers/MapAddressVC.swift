@@ -19,7 +19,11 @@ class MapAddressVC: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setAddressPin(address: address!)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
+            self.setAddressPin(address: self.address!)
+        })
+        
     }
     
     override func didReceiveMemoryWarning() {
