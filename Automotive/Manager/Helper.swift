@@ -2,7 +2,7 @@
 //  Helper.swift
 //  Automotive
 //
-//  Created by Mac on 4/30/17.
+//  Created by Mac on 4/30/17
 //  Copyright © 2017 Mujtaba Alam. All rights reserved.
 //
 
