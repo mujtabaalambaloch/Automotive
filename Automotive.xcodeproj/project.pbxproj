@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0436175F1EB73B410032FDE6 /* Favourites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436175D1EB73B410032FDE6 /* Favourites+CoreDataClass.swift */; };
+		043617601EB73B410032FDE6 /* Favourites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436175E1EB73B410032FDE6 /* Favourites+CoreDataProperties.swift */; };
+		043617621EB73BE00032FDE6 /* DatabaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043617611EB73BE00032FDE6 /* DatabaseHandler.swift */; };
 		045F4BF71EB6638500F95BE8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045F4BF61EB6638500F95BE8 /* Extensions.swift */; };
 		048881631EB6224100910804 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048881621EB6224100910804 /* AppDelegate.swift */; };
 		048881681EB6224100910804 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 048881661EB6224100910804 /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0436175D1EB73B410032FDE6 /* Favourites+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0436175E1EB73B410032FDE6 /* Favourites+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Favourites+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		043617611EB73BE00032FDE6 /* DatabaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHandler.swift; sourceTree = "<group>"; };
 		045F4BF61EB6638500F95BE8 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Extensions/Extensions.swift; sourceTree = "<group>"; };
 		0488815F1EB6224100910804 /* Automotive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Automotive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		048881621EB6224100910804 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,7 @@
 				04B91A4A1EB64563009D5A03 /* Constants.swift */,
 				04B91A4D1EB645A1009D5A03 /* APIManager.swift */,
 				04B91A4F1EB647EC009D5A03 /* Helper.swift */,
+				043617611EB73BE00032FDE6 /* DatabaseHandler.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -221,6 +228,8 @@
 		04E259B91EB63EFA00401E24 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0436175D1EB73B410032FDE6 /* Favourites+CoreDataClass.swift */,
+				0436175E1EB73B410032FDE6 /* Favourites+CoreDataProperties.swift */,
 				04E259B71EB63EF400401E24 /* Vehicle.swift */,
 			);
 			path = Models;
@@ -535,9 +544,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043617621EB73BE00032FDE6 /* DatabaseHandler.swift in Sources */,
 				04E259AA1EB6244B00401E24 /* ListingVC.swift in Sources */,
 				048881631EB6224100910804 /* AppDelegate.swift in Sources */,
 				04E259AD1EB6248100401E24 /* FavouriteVC.swift in Sources */,
+				043617601EB73B410032FDE6 /* Favourites+CoreDataProperties.swift in Sources */,
+				0436175F1EB73B410032FDE6 /* Favourites+CoreDataClass.swift in Sources */,
 				04B91A521EB65302009D5A03 /* VehicleViewModel.swift in Sources */,
 				04B91A4E1EB645A1009D5A03 /* APIManager.swift in Sources */,
 				0488816B1EB6224100910804 /* Automotive.xcdatamodeld in Sources */,
