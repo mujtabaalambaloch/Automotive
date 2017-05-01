@@ -103,17 +103,30 @@ extension ListingVC: UITableViewDelegate, UITableViewDataSource {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: ListingVC.cellIdentifier, for: indexPath) as! CarTableViewCell
         
+        
+        
         let viewModel: VehicleViewModel = vehicles[indexPath.row]
         
         cell.modelLabel.text = viewModel.makeText
         cell.mileageLabel.text = viewModel.mileageText
-        cell.mapAddressButton.setTitle(viewModel.addressText, for: UIControlState.normal)
+        cell.mapAddressButton.setTitle(viewModel.addressText, for: .normal)
         cell.yearLabel.text = viewModel.yearText
         cell.fuelTypeLabel.text = viewModel.fuelText
         cell.priceLabel.text = viewModel.priceText
         
         cell.imageSlideView.setImageInputs(viewModel.photos as! [InputSource])
         
+        
+        cell.favSwitch.isOn = viewModel.isFav
+        cell.favSwitch.addTarget(self, action: #selector(switchValueDidChange(sender:)), for: .valueChanged)
+        cell.favSwitch.tag = indexPath.row
+        
         return cell
+    }
+    
+    func switchValueDidChange(sender:AnyObject) {
+        let favSwitch = sender as! UISwitch
+        let viewModel: VehicleViewModel = vehicles[favSwitch.tag]
+        viewModel.addRemoveFav()
     }
 }

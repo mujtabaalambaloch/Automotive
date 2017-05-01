@@ -7,16 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class FavouriteVC: UIViewController {
     @IBOutlet weak var favTableView: UITableView!
 
     static let cellIdentifier = "FavCellIdentifer"
     
+    var vehicles = [FavViewModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         favTableView.register(UINib(nibName: "FavTableViewCell", bundle: nil), forCellReuseIdentifier: FavouriteVC.cellIdentifier)
         favTableView.tableFooterView = UIView(frame: CGRect.zero)
+        
+        let fetchRequest:NSFetchRequest<Favourites> = Favourites.fetchRequest()
+        
+        do {
+            let searchResult = try DatabaseHandler.getContext().fetch(fetchRequest)
+            print("number of results: \(searchResult.count)")
+            
+            for result in searchResult as [Favourites] {
+                let viewModel = FavViewModel.init(vehicle: result)
+                self.vehicles.append(viewModel)
+            }
+            
+        } catch {
+            print("Error")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,11 +55,21 @@ extension FavouriteVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return vehicles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FavouriteVC.cellIdentifier, for: indexPath) as! FavTableViewCell
+        
+        let viewModel: FavViewModel = vehicles[indexPath.row]
+        
+        cell.modelLabel.text = viewModel.makeText
+        cell.milageLabel.text = viewModel.mileageText
+        cell.fuelTypeLabel.text = viewModel.fuelText
+        cell.priceLabel.text = viewModel.priceText
+        cell.mapAddressButton.setTitle(viewModel.addressText, for: UIControlState.normal)
+        cell.yearLabel.text = viewModel.yearText
+        
         return cell
     }
 }

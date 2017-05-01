@@ -64,4 +64,35 @@ class DatabaseHandler: NSObject {
         }
     }
     
+    // MARK: - Favourites Delete, Get Value
+    
+    class func favValue(favID: Int) -> Favourites? {
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Favourites")
+        let predicate = NSPredicate(format: "id == %ld", favID)
+        fetchRequest.predicate = predicate
+        
+        do {
+            let searchResult = try DatabaseHandler.getContext().fetch(fetchRequest) as? [Favourites]
+            if searchResult!.count > 0 {
+                return searchResult![0]
+            }
+        } catch {
+            print("Error")
+            return nil
+        }
+        
+        return nil
+    }
+    
+    class func deleteContext(favID: Int) {
+        guard let result = DatabaseHandler.favValue(favID: favID) else{ return }
+        DatabaseHandler.getContext().delete(result)
+    }
+    
+    class func favExist(favID: Int) -> Bool {
+        guard DatabaseHandler.favValue(favID: favID) != nil else { return false }
+        return true
+    }
+    
 }

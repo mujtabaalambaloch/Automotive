@@ -8,6 +8,7 @@
 
 import Foundation
 import ImageSlideshow
+import CoreData
 
 class VehicleViewModel {
     
@@ -43,6 +44,30 @@ class VehicleViewModel {
             photosArray.append(AlamofireSource.init(urlString: name.string!)!)
         }
         return photosArray
+    }
+    
+    var isFav: Bool {
+        return DatabaseHandler.favExist(favID: vehicle.id!)
+    }
+    
+    func addRemoveFav() {
+    
+        if !isFav {
+            let favourite = NSEntityDescription.insertNewObject(forEntityName: String(describing: Favourites.self), into: DatabaseHandler.getContext()) as! Favourites
+            favourite.id = Int64(vehicle.id!)
+            favourite.accidentFree = vehicle.accidentFree!
+            favourite.address = vehicle.address
+            favourite.firstRegistration = vehicle.firstRegistration
+            favourite.fuelType = vehicle.fuelType
+            favourite.mileage = Int64(vehicle.mileage!)
+            favourite.price = Int64(vehicle.price!)
+            favourite.powerKW = Int64(vehicle.powerKW!)
+            favourite.make = vehicle.make
+            
+            DatabaseHandler.saveContext()
+        } else {
+            DatabaseHandler.deleteContext(favID: vehicle.id!)
+        }
     }
     
     init(vehicle: Vehicle) {
